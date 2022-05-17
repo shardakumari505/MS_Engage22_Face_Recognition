@@ -11,6 +11,7 @@ import LoggedInDashboard from './pages/loggedin-dashboard/loggedin-dashboard';
 import SigninPage from './pages/signin-page/signin-page';
 import SignupPage from './pages/signup-page/signup-page';
 import Navbar from './components/navbar-component/navbar-component';
+import TransactionPage from './components/transaction-page/transaction-page';
 
 const StyledApp = styled.div`
   color: ${(props) => props.theme.fontColor};
@@ -57,6 +58,7 @@ function App() {
                     <Route path="/signin" element={<SigninPage/>} />
                     <Route path="/signup" element={<SignupPage/>} />
                     <Route path="/loggedindashboard" element={<LoggedInDashboard/>} />
+                    <Route path="/transactionpage" element={<TransactionPage/>} />
                 </Routes>
             </Router>   
           </UserProvider>
