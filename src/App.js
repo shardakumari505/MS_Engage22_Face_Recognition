@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useEffect} from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {UserProvider} from './userauth';
@@ -44,6 +45,7 @@ function App() {
     };
 
   const icon = theme === "light" ? <HiMoon size={40} /> : <CgSun size={40} />;
+
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
