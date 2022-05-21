@@ -1,0 +1,98 @@
+.signup-form-component
+{
+    height: 80vh ;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #010a17, #151a70, #2c24ad);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #010a17, #151a70, #2c24ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    float: right;
+    border: none;
+    border-radius: 50px;
+    margin: 40px 50px 0px 0px;
+    margin-top: 15vh;
+    color: var(--textcol);
+
+}
+.signup-form-component h1{
+    margin: 0px;
+}
+.signup-form-component form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+label{
+    display:block;
+    margin-top: 20px;
+}
+input{
+    width: 25vw;
+    padding: 5px;
+    margin-top: 2px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+.sigup-form-title{
+    padding-bottom: 20px;
+    color: var(--textcol)
+}
+.signup-form-subtitle{
+    color: var(--textcol);
+}
+.signup-register-button{
+    width: 120px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.signup-upload-image-input{
+    width: 12vw;
+    /*background-color: aliceblue;*/
+    border: none;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.google-signup-component{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 5vh;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #1877f2;
+}
+.google-logo{
+    height: 4.5vh;
+    width: 2vw;
+    background-color: aliceblue;
+    margin-left: 2px;
+    border-radius: 3px;
+}
+.google-signup-submit-button{
+    width: 200px;
+    // padding: 9px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: aliceblue;
+    background-color: #1877f2;
+    // border-radius: 20px;
+    // margin-top: 20px;
+}
