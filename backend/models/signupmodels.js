@@ -7,7 +7,8 @@ const signUpTemplate = new mongoose.Schema({
     },
     email:{
         type:String,
-        required:true
+        required:true,
+        unique:true
     },
     password:{
         type:String,
@@ -19,7 +20,7 @@ const signUpTemplate = new mongoose.Schema({
     },
     image:{
         type:Buffer,
-        required:true
+        required:false
     },
     date:{
         type:Date,

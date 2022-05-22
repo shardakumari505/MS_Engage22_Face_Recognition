@@ -6,18 +6,61 @@ import Glogo from './glogo.png';
 
 class SigninForm extends Component{
 
+  constructor(){
+    super()
+    this.state = {
+        email:'',
+        password:''
+    }
+    this.changeEmail = this.changeEmail.bind(this)
+    this.changePassword = this.changePassword.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
+}
+
+changeEmail(event){
+    this.setState({
+        email:event.target.value
+    })
+}
+
+changePassword(event){
+    this.setState({
+        password:event.target.value
+    })
+}
+
+onSubmit(event){
+    event.preventDefault()
+
+    const signedin = {
+        email: this.state.email,
+        password: this.state.password
+    }
+
+    axios.post('http://localhost:5000/signin/signin', signedin)
+    .then(response => console.log(response.data))
+
+    this.setState({
+        email: '',
+        password: ''
+    })
+    window.location = '/loggedindashboard'
+}
+
 
        render(){
         return(
         <div className='signin-form-component'>            
             <h1 className='sigin-form-title'> Sign In </h1>
             <h4 className='signin-form-subtitle'> New User ? <NavLink className='signin-signup-button-text' to="/signup">Create An Account</NavLink></h4>
-            <form action="/signin" method="POST">
+            <form onSubmit={this.onSubmit}>
                 <label className='signin-email-label'>Email</label>
                 <input className='signin-email-input' 
                   type='email'  
-                  name='inputemail' 
+                  name='email' 
                   id='email' 
+                  onChange={this.changeEmail}
+                  value={this.state.email}
                   required>
                 </input>
 
@@ -26,6 +69,8 @@ class SigninForm extends Component{
                   type='password' 
                   name='password' 
                   id='current-password'
+                  onChange={this.changePassword}
+                  value={this.state.password}
                   required>
                 </input>
 

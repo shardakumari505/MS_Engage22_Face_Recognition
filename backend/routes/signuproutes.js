@@ -4,28 +4,45 @@ const signUpTemplateCopy = require('../models/signupmodels')
 const bcrypt = require('bcrypt')
 const res = require('express/lib/response')
 
+
 router.post('/signup', async (request, response) =>{
 
+    const {fullName, email, password, ConfirmPassword, image} = request.body
+
+
     const saltPassword = await bcrypt.genSalt(10)
-    const securePassword = await bcrypt.hash(request.body.password, saltPassword)
+    const securePassword = await bcrypt.hash(password, saltPassword)
 
     const saltConfirmPassword = await bcrypt.genSalt(10)
-    const secureConfirmPassword = await bcrypt.hash(request.body.ConfirmPassword, saltConfirmPassword)
+    const secureConfirmPassword = await bcrypt.hash(ConfirmPassword, saltConfirmPassword)
 
     const signedUpUser = new signUpTemplateCopy({
-        fullName:request.body.fullName,
-        email:request.body.email,
+        fullName: fullName,
+        email:email,
         password:securePassword,
-        ConfirmPassword:secureConfirmPassword,
-        image:request.body.image
+        ConfirmPassword: secureConfirmPassword,
+        image: image
+    
     })
-    signedUpUser.save()
-    .then(data => {
-        response.json(data)
+
+    signUpTemplateCopy.find({}, function(error, data){
+        const emailexist = data.find(user=> {
+            return user.email === email
+        })
+        if (emailexist){
+            response.send('User email already exist')
+        }
+        else{
+            signedUpUser.save()
+            .then(data => {
+                response.json(data)
+            })
+            .catch(error =>{
+                response.json(error)
+            })
+        }
     })
-    .catch(error =>{
-        response.json(error)
-    })
+
 })
 
 module.exports = router
