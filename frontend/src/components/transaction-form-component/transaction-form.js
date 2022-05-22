@@ -69,7 +69,7 @@ class TransactionForm extends Component {
     render(){
         return (
             <div className='transaction-form-component'>            
-            <h1 className='transaction-form-title'> Sign In </h1>
+            <h1 className='transaction-form-title'> Bank Details </h1>
             <form onSubmit={this.onSubmit}>
                 <label className='transaction-name-label'>Name</label>
                 <input className='transaction-name-input'  
