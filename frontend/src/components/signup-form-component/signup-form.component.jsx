@@ -89,6 +89,7 @@ class SignupForm extends Component {
                     type='text'  
                     name='name' 
                     id='name'
+                    required
                     onChange={this.changeFullName}
                     value={this.state.fullName} />
 
@@ -97,6 +98,7 @@ class SignupForm extends Component {
                     type='email'  
                     name='email' 
                     id='email'
+                    required
                     onChange={this.changeEmail}
                     value={this.state.email} />
 
@@ -105,6 +107,7 @@ class SignupForm extends Component {
                     type='password' 
                     name='password' 
                     id='current-password'
+                    required
                     onChange={this.changePassword}
                     value={this.state.password} />
 
@@ -113,6 +116,7 @@ class SignupForm extends Component {
                     type='password' 
                     name='confirm-password' 
                     id='confirm-password'
+                    required
                     onChange={this.changeConfirmPassword}
                     value={this.state.ConfirmPassword} />
 
@@ -120,6 +124,7 @@ class SignupForm extends Component {
                 <input className='signup-upload-image-input' 
                 type="file" id="image-input" 
                 accept="image/jpeg, image/png, image/jpg"
+                required
                 onChange={this.changeImage}
                 value={this.state.image} />
 

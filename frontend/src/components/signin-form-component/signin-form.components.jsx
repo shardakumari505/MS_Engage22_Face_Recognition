@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import axios from 'axios'
 import './signin-form.styles.scss';
 import Glogo from './glogo.png';
+import GoogleLogin from 'react-google-login';
+import GoogleLoginComponent from '../google-login/google-login';
 
 class SigninForm extends Component{
 
@@ -44,9 +46,13 @@ onSubmit(event){
         email: '',
         password: ''
     })
-    window.location = '/loggedindashboard'
+    
 }
 
+// responseSuccessGoogle=(response) => {
+//     console.log(response);
+//     console.log(response.profileObj);
+// }
 
        render(){
         return(
@@ -88,6 +94,15 @@ onSubmit(event){
                   type='submit' 
                   value='Continue with Google' />
                 </button>
+
+                {/* <GoogleLoginComponent /> */}
+
+                {/* <GoogleLogin
+                clientId="821565159505-q3jkrlf8reipab1kqtsribkv150ciod6.apps.googleusercontent.com"
+                buttonText="Login with Google"
+                onSuccess={this.responseSuccessGoogle}
+                onFailure={this.responseErrorGoogle}
+                cookiePolicy={'single_host_origin'} /> */}
 
                 <p className='signin-forget-password'> Forgot Password? </p>
             </form>

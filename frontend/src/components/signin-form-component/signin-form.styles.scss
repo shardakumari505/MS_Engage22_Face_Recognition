@@ -8,13 +8,12 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    float: right;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin-left: auto;
+    margin-right: auto;
     border: none;
     border-radius: 50px;
-    margin: 40px 50px 0px 0px;
     margin-top: 20vh;
     color: var(--textcol);
 
@@ -73,14 +72,11 @@ input{
 }
 .google-login-submit-button{
     width: 200px;
-    // padding: 9px;
     cursor: pointer;
     outline: none;
     border: none;
     color: aliceblue;
     background-color: #1877f2;
-    // border-radius: 20px;
-    // margin-top: 20px;
 }
 .signin-forget-password{
     display: block;

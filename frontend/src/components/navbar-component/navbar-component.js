@@ -33,7 +33,7 @@ const Navbar = () => {
     return(
             <div className='navbar-container'>
         
-                <h1><NavLink className='navbar-logo' to="/"> &lt; EPay &gt; </NavLink></h1>
+                <h1><NavLink className='navbar-logo' to="/"> &lt; FPay &gt; </NavLink></h1>
                     <nav>                        
                         {/* <ul id='menu-list' className= {MenuList===true?'menu-list':'menu-list-closed'}> */}
                         <ul id='menu-list' className=''>

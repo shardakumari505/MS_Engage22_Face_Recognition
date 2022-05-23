@@ -13,7 +13,6 @@ router.get('/fetch-signindata/:email', async (req, res) =>{
       userTable
         .findOne(query)
         .exec(function(err, userTable) {
-  
           
           if(err) { // error happen,
             console.error(err); // log error
