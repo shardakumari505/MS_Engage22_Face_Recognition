@@ -4,7 +4,7 @@ import axios from 'axios'
 import './signin-form.styles.scss';
 import Glogo from './glogo.png';
 import GoogleLogin from 'react-google-login';
-import GoogleLoginComponent from '../google-login/google-login';
+import Login from '../google-login/google-login';
 
 class SigninForm extends Component{
 
@@ -95,7 +95,7 @@ onSubmit(event){
                   value='Continue with Google' />
                 </button>
 
-                {/* <GoogleLoginComponent /> */}
+                {/* <Login /> */}
 
                 {/* <GoogleLogin
                 clientId="821565159505-q3jkrlf8reipab1kqtsribkv150ciod6.apps.googleusercontent.com"

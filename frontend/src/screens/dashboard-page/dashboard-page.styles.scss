@@ -1,10 +1,10 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant:ital,wght@1,300;1,400;1,500&family=Montserrat:wght@300;400;500&family=Roboto:wght@300;400;500;700&display=swap');
 .dashboard-page-container{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: rgb(192,192,192);
-    background: linear-gradient(74deg, rgba(192,192,192,1) 0%, rgba(220,220,220,1) 22%, rgba(249,249,248,1) 100%);
+    background: rgb(28,160,218);
+    background: linear-gradient(90deg, rgba(28,160,218,1) 0%, rgba(213,250,255,1) 52%, rgba(201,247,255,1) 92%);
 }
 
 .hometopellipse{
@@ -31,29 +31,159 @@
 .dashboard-page-left{
     position: absolute;
     height: 100vh;
-    width: 40vw;
+    width: 50vw;
     left: 0vw;
     top: 0vh;
     z-index: 20;
+    // background-color: bisque;
 }
 .dashboard-page-right{
     position: absolute;
     height: 100vh;
-    width: 60vw;
+    width: 50vw;
     right: 0vw;
     top: 0vh;
     z-index: 20;
+    // background-color: aqua;
 }
-.dashboard-right-lottie1{
+.dashboard-left-lottie2{
     position: absolute;
-    height: 40vh;
-    width: 50%;
-    right: 6vw;
-    top: 15vh;
+    height: 70vh;
+    width: 50vw;
+    z-index: 26;
+    // right: 6vw;
+    top: 30vh;
 }
 .dashboard-left-lottie1{
     position: absolute;
-    height: 70vh;
+    height: 25vh;
     width: 40vw;
-    top: 30vh;
+    top: 20vh;
+    z-index: 25;
+}
+.dashboard-page-title{
+    position: absolute;
+    top: 40vh;
+    width: 40vw;
+    left: 12vw;
+    font-size: 2.2rem;
+    display: flex;
+    z-index: 30;
+    flex-direction: column;
+    padding: 10px;
+    font-family: Roboto;
+    font-weight: 300;
+    color: #000222;
+}
+.dashboard-page-title h3{
+    font-weight: 500;
+}
+.dashboard-page-title h2{
+    margin-top: 2vh;
+    color: #000222;
+    font-weight: 400;
+}
+.dashboard-page-title h2 span{
+    color: #930000;
+    font-family: Roboto;
+    font-weight: 700;
+}
+.dashboard-page-title p{
+    font-size: 1.5rem;
+    margin-top: 2vh;
+}
+@media (max-width:1023px) {
+    .dashboard-page-container{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background: rgb(28,160,218);
+        background: linear-gradient(90deg, rgba(28,160,218,1) 0%, rgba(213,250,255,1) 52%, rgba(201,247,255,1) 92%);
+    }
+    
+    .hometopellipse{
+        position: absolute;
+        width: 12vw;
+        height: 12vw;
+        left: 8vw;
+        top:0vh;
+        z-index: 11;
+        border-radius: 400px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .homebottomellipse{
+        position: absolute;
+        width: 20vw;
+        height: 20vw;
+        left: 10vw;
+        top:20vh;
+        z-index: 12;
+        animation: orbit2 4s linear infinite;
+        border-radius: 400px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .dashboard-page-left{
+        position: absolute;
+        height: 100vh;
+        width: 50vw;
+        left: 0vw;
+        top: 0vh;
+        z-index: 20;
+        // background-color: bisque;
+    }
+    .dashboard-page-right{
+        position: absolute;
+        height: 100vh;
+        width: 50vw;
+        right: 0vw;
+        top: 0vh;
+        z-index: 20;
+        // background-color: aqua;
+    }
+    .dashboard-left-lottie2{
+        position: absolute;
+        height: 70vh;
+        width: 50vw;
+        z-index: 26;
+        // right: 6vw;
+        top: 30vh;
+    }
+    .dashboard-left-lottie1{
+        position: absolute;
+        height: 25vh;
+        width: 40vw;
+        top: 20vh;
+        z-index: 25;
+    }
+    .dashboard-page-title{
+        position: absolute;
+        top: 40vh;
+        width: 40vw;
+        left: 12vw;
+        font-size: 1.8rem;
+        display: flex;
+        z-index: 30;
+        flex-direction: column;
+        padding: 10px;
+        font-family: Roboto;
+        font-weight: 300;
+        color: #000222;
+    }
+    .dashboard-page-title h3{
+        font-weight: 500;
+    }
+    .dashboard-page-title h2{
+        margin-top: 2vh;
+        color: #000222;
+        font-weight: 400;
+    }
+    .dashboard-page-title h2 span{
+        color: #930000;
+        font-family: Roboto;
+        font-weight: 700;
+    }
+    .dashboard-page-title p{
+        font-size: 1.1rem;
+        margin-top: 2vh;
+    }
 }

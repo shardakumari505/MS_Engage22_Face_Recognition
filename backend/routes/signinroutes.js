@@ -1,12 +1,14 @@
 const express = require('express')
 const router = express.Router()
 const userTable = require('../models/signupmodels')
+const Joi = require("joi")
+const bcrypt = require('bcrypt')
 
 
-router.get('/fetch-signindata/:email', async (req, res) =>{
-    const {email} = req.params;
+router.post('/signin', async (req, res) =>{
+    const {email} = req.body;
     var query = {
-        email: req.params.email,
+        email: req.body.email,
         tokenid: {$exists: true, $not: {$size: 0}}
       };
       
@@ -28,30 +30,46 @@ router.get('/fetch-signindata/:email', async (req, res) =>{
               message: 'User not found'
             }); // respond with 404 status and send json response with success false and message. return will stop execution to go down
           }
+
+          res.redirect('http://localhost:5000/loggedindashboard/loggedindashboard');
   
-          res.send({
-            success: true,
-            tokenid: userTable.tokenid
-          }); // and at last everything is ok, we return json response with success and tokenid in response
+          // res.send({
+          //   success: true,
+          //   tokenid: userTable.tokenid
+
+          // }); // and at last everything is ok, we return json response with success and tokenid in response
         });
 });
 
 
-// router.post("/signin", async (request, response) => {
+// router.post('/signin', async (request, response) =>{
 
-//         const inputemail = request.body.email;
-//         const inputpassword = request.body.password;
+//   try{
+//     const {error} = validate(request.body);
+//     if(error)
+//       return response.status(400).send({message:error.details[0].message});
+//     const user = await userTable.findOne({email:request.body.email});
+//     if(!user)
+//       return response.status(401).send({message:"Invalid email or password"});
+//     const validPassword = await bcrypt.compare(
+//       request.body.password, userTable.password
+//     );
+//     if(!validPassword)
+//       return response.status(400).send({message:"Invalid Email or Password"});
+    
+//   }
+//   catch(error){
+//     response.status(500).send({message: "Internal Server Error"})
+//   }
 
-//         const signinuser = await register.findOne(email);
-//         // const isMatch = bcrypt.compare(inputpassword, register.password)
+// })
 
-//         if(inputemail === signinuser){
-//             response.send("loggedin")
-//         } 
-//         else{
-//         response.status(400).send("invalid all login details")
-//     }
+// const validate = (data) => {
+//   const schema = Joi.object({
+//     email:Joi.string.email.required().label("Email"),
+//     password:Joi.string().required().label("Password")
+//   });
+//   return schema.validate(data);
 // }
-// )
 
 module.exports = router

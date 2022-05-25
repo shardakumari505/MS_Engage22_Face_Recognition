@@ -1,60 +1,50 @@
-// import React, { Component } from "react";
-// import { GoogleLogin, GoogleLogout } from "react-google-login";
+import React, { useState } from 'react';
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
-// const CLIENT_ID =
-//   "821565159505-q3jkrlf8reipab1kqtsribkv150ciod6.apps.googleusercontent.com";
+const clientId = "821565159505-q3jkrlf8reipab1kqtsribkv150ciod6.apps.googleusercontent.com";
 
-// function GoogleLoginComponent() {
-//   // Success Handler
-//   responseGoogleSuccess = (response) => {
-//     console.log();
-//     let userInfo = {
-//       name: response.profileObj.name,
-//       emailId: response.profileObj.email,
-//     };
-//     this.setState({ userInfo, isLoggedIn: true });
-//   };
+function Login() {
 
-//   // Error Handler
-//   responseGoogleError = (response) => {
-//     console.log(response);
-//   };
+    const [showloginButton, setShowloginButton] = useState(true);
+    const [showlogoutButton, setShowlogoutButton] = useState(false);
+    const onLoginSuccess = (res) => {
+        console.log('Login Success:', res.profileObj);
+        setShowloginButton(false);
+        setShowlogoutButton(true);
+    };
 
-//   // Logout Session and Update State
-//   logout = (response) => {
-//     console.log(response);
-//     let userInfo = {
-//       name: "",
-//       emailId: "",
-//     };
-//     this.setState({ userInfo, isLoggedIn: false });
-//   };
+    const onLoginFailure = (res) => {
+        console.log('Login Failed:', res);
+    };
 
-//     return (
-//       <div className="row mt-5">
-//         <div className="col-md-12">
-//           {this.state.isLoggedIn ? (
-//             <div>
-//               <h1>Welcome, {this.state.userInfo.name}</h1>
+    const onSignoutSuccess = () => {
+        alert("You have been logged out successfully");
+        console.clear();
+        setShowloginButton(true);
+        setShowlogoutButton(false);
+    };
 
-//               <GoogleLogout
-//                 clientId={CLIENT_ID}
-//                 buttonText={"Logout"}
-//                 onLogoutSuccess={this.logout}
-//               ></GoogleLogout>
-//             </div>
-//           ) : (
-//             <GoogleLogin
-//               clientId={CLIENT_ID}
-//               buttonText="Sign In with Google"
-//               onSuccess={responseGoogleSuccess}
-//               onFailure={responseGoogleError}
-//               isSignedIn={true}
-//               cookiePolicy={"single_host_origin"}
-//             />
-//           )}
-//         </div>
-//       </div>
-//     );
-//   }
-// export default GoogleLoginComponent;
+    return (
+        <div>
+            { showloginButton ?
+                <GoogleLogin
+                    clientId={clientId}
+                    buttonText="Sign In"
+                    onSuccess={onLoginSuccess}
+                    onFailure={onLoginFailure}
+                    cookiePolicy={'single_host_origin'}
+                    isSignedIn={true}
+                /> : null}
+
+            { showlogoutButton ?
+                <GoogleLogout
+                    clientId={clientId}
+                    buttonText="Sign Out"
+                    onLogoutSuccess={onSignoutSuccess}
+                >
+                </GoogleLogout> : null
+            }
+        </div>
+    );
+}
+export default Login;

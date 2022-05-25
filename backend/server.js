@@ -6,6 +6,7 @@ const routesUrls = require('./routes/signuproutes')
 const epayroutesUrls = require('./routes/epayroutes')
 const signInroutesUrls = require('./routes/signinroutes')
 const productRoutes = require('./routes/productRoutes')
+const loggedinRoutes = require('./routes/loggedindashboardroutes')
 
 const cors = require('cors')
 connectDB();
@@ -16,6 +17,7 @@ app.use(cors())
 app.use('/signup', routesUrls)
 app.use('/signin', signInroutesUrls)
 app.use('/transactionpage', epayroutesUrls)
+app.use('/loggedindashboard', loggedinRoutes)
 
 app.use('/api/products', productRoutes)
 mongoose.connect(process.env.MONGO_URI, () => console.log("Database connected"))

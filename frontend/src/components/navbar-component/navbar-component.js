@@ -3,31 +3,7 @@ import './navbar-component.styles.scss';
 import { NavLink } from 'react-router-dom';
 import { UserContext } from '../../userauth';
 
-const Navbar = () => {
-    // const [loggedIn,setloggedIn] = useContext(UserContext);
-    // const [MenuList, setMenulist] = useState(false);
-    
-
-    // const handleLogout = (event) =>{
-    //     event.preventDefault();
-    //     if(loggedIn===true){
-    //     setloggedIn(false)
-    //     alert("Logged Out Sucessfully");}
-    //     else{
-    //         alert("Please SignIn to Logout")
-    //     }
-
-    // }
-    
-
-    // const handleclick1 = (event) =>{
-    //     event.preventDefault();
-    //     setloggedIn(true)
-    //     alert("Logged In Sucessfully");
-    // }
-    // const toggleMenu = (event) => {
-    //     setMenulist(!MenuList);
-    // }
+const Navbar = ({ click }) => {
 
     
     return(
@@ -36,7 +12,7 @@ const Navbar = () => {
                 <h1><NavLink className='navbar-logo' to="/"> &lt; FPay &gt; </NavLink></h1>
                     <nav>                        
                         {/* <ul id='menu-list' className= {MenuList===true?'menu-list':'menu-list-closed'}> */}
-                        <ul id='menu-list' className=''>
+                        <ul id='menu-list' className='navbar__link'>
                             <li>
                                 <NavLink className='' to="/">Home</NavLink>
                             </li>
@@ -63,9 +39,14 @@ const Navbar = () => {
                                 
 
                         </ul>
+                        <div className="hamburger__menu" onClick={click}>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                     </nav>
                 {/* <h1 className='hamburger-menu-icon' onClick={toggleMenu}>☰</h1> */}
-                <h1 className='hamburger-menu-icon' >☰</h1>
+                {/* <h1 className='hamburger-menu-icon' >☰</h1> */}
             </div>
            
     );

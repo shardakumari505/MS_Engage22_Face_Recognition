@@ -1,16 +1,11 @@
-import "./SideDrawer.css";
+import "./SideDrawer.scss";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const SideDrawer = ({ show, click }) => {
   const sideDrawerClass = ["sidedrawer"];
 
-  const cart = useSelector((state) => state.cart);
-  const { cartItems } = cart;
-
-  const getCartCount = () => {
-    return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
-  };
 
   if (show) {
     sideDrawerClass.push("show");
@@ -23,16 +18,17 @@ const SideDrawer = ({ show, click }) => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/cart">
-            <i className="fas fa-shopping-cart"></i>
-            <span>
-              Cart{" "}
-              <span className="sidedrawer__cartbadge">{getCartCount()}</span>
-            </span>
-          </Link>
+            <NavLink className='navbar-logo' to="/"> &lt; FPay &gt; </NavLink>
         </li>
         <li>
-          <Link to="/">Shop</Link>
+          <Link to="/transactionpage">Online Payment</Link>
+        </li>
+        <li>
+          <Link to="/eshop">E-Shopping</Link>
+        </li>
+        <li>
+            <button><NavLink className='navbar-login-button-text' to="/signin">Login | Signup                                
+                                        </NavLink></button>
         </li>
       </ul>
     </div>
