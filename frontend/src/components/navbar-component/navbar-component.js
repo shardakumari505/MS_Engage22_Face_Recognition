@@ -19,10 +19,7 @@ const Navbar = ({ click }) => {
                             <li>
                                 <NavLink className='' to="/transactionpage">Online Payment</NavLink>
                             </li>
-                            <li>
-                                <NavLink className='' to="/eshop">E-Shopping</NavLink>
-                            </li>
-                            
+                                                        
                             <li>
                                 <NavLink className='' to="/"></NavLink>
                             </li>

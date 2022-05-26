@@ -1,15 +1,12 @@
 require("dotenv").config();
 const express = require('express');
 const mongoose = require('mongoose')
-const connectDB = require("./config/db");
 const routesUrls = require('./routes/signuproutes')
 const epayroutesUrls = require('./routes/epayroutes')
 const signInroutesUrls = require('./routes/signinroutes')
-const productRoutes = require('./routes/productRoutes')
 const loggedinRoutes = require('./routes/loggedindashboardroutes')
 
 const cors = require('cors')
-connectDB();
 
 const app = express();
 app.use(express.json());
@@ -19,7 +16,6 @@ app.use('/signin', signInroutesUrls)
 app.use('/transactionpage', epayroutesUrls)
 app.use('/loggedindashboard', loggedinRoutes)
 
-app.use('/api/products', productRoutes)
 mongoose.connect(process.env.MONGO_URI, () => console.log("Database connected"))
 
 const PORT = process.env.PORT || 5000;

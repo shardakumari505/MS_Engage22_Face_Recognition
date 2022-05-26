@@ -1,7 +1,6 @@
 import "./SideDrawer.scss";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 const SideDrawer = ({ show, click }) => {
   const sideDrawerClass = ["sidedrawer"];
@@ -22,9 +21,6 @@ const SideDrawer = ({ show, click }) => {
         </li>
         <li>
           <Link to="/transactionpage">Online Payment</Link>
-        </li>
-        <li>
-          <Link to="/eshop">E-Shopping</Link>
         </li>
         <li>
             <button><NavLink className='navbar-login-button-text' to="/signin">Login | Signup                                
