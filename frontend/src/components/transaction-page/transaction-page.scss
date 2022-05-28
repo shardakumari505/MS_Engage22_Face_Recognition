@@ -1,0 +1,24 @@
+.transaction-page{
+    height: 100vh;
+    width: 100vw;
+    background: rgb(28,160,218);
+    background: linear-gradient(90deg, rgba(28,160,218,1) 0%, rgba(213,250,255,1) 52%, rgba(201,247,255,1) 92%);
+}
+.transaction-page-subsections{
+    position: absolute;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.transaction-page-subsections button{
+    height: 5vh;
+    width: 10vw;
+    border-radius: 20px;
+    border: 1px solid;
+    margin: 20px;
+    color: aliceblue;
+    background-color: #006ee6;
+}

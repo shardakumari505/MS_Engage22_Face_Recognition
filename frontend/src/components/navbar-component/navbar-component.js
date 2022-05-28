@@ -1,10 +1,9 @@
 import React,{useContext, useState} from 'react';
 import './navbar-component.styles.scss';
 import { NavLink } from 'react-router-dom';
-import { UserContext } from '../../userauth';
 
 const Navbar = ({ click }) => {
-
+    
     
     return(
             <div className='navbar-container'>
@@ -16,18 +15,14 @@ const Navbar = ({ click }) => {
                             <li>
                                 <NavLink className='' to="/">Home</NavLink>
                             </li>
-                            <li>
+                            {/* <li>
                                 <NavLink className='' to="/transactionpage">Online Payment</NavLink>
-                            </li>
+                            </li> */}
                                                         
                             <li>
                                 <NavLink className='' to="/"></NavLink>
                             </li>
 
-                            {/* <li>
-                                <button><NavLink className='navbar-login-button-text' to="/signin">Login | Signup                                
-                                        </NavLink></button>:<button onClick={handleLogout} className='navbar-login-button-text'>Signout</button>
-                            </li> */}
                             <li>
                                 <button><NavLink className='navbar-login-button-text' to="/signin">Login | Signup                                
                                         </NavLink></button>

@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import './signup-form.styles.scss';
 import axios from 'axios';
-import Glogo from './glogo.png'
 
 class SignupForm extends Component {
 
@@ -73,7 +72,7 @@ class SignupForm extends Component {
             ConfirmPassword: '',
             image: ''
         })
-        window.location = '/loggedindashboard'
+        window.location = '/transactionpage'
     }
 
     render(){
@@ -127,13 +126,6 @@ class SignupForm extends Component {
                 required
                 onChange={this.changeImage}
                 value={this.state.image} />
-
-                <button className='google-signup-component'>
-                  <img className='google-logo' src={Glogo} alt='Google'/>
-                  <input className='google-signup-submit-button' 
-                  type='submit' 
-                  value='Sign Up with Google' />
-                </button>
 
                 
                 <input className='signup-register-button' value='Register' type='submit'/>

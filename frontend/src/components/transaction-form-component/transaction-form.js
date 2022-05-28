@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './transaction-form.scss';
 import axios from 'axios';
 
+
 class TransactionForm extends Component {
 
     constructor(){
@@ -76,6 +77,7 @@ class TransactionForm extends Component {
                     type='text'  
                     name='fullName' 
                     id='name' 
+                    required
                     onChange={this.changeFullName}
                     value={this.state.fullName} />
                 
@@ -84,6 +86,7 @@ class TransactionForm extends Component {
                     type='text'  
                     name='bankName' 
                     id='name'
+                    required
                     onChange={this.changeBankName}
                     value={this.state.bankName} />
                 
@@ -92,6 +95,7 @@ class TransactionForm extends Component {
                     type='text'  
                     name='accountNumber' 
                     id='name'
+                    required
                     onChange={this.changeAccountNumber}
                     value={this.state.accountNumber} />
                 
@@ -100,13 +104,14 @@ class TransactionForm extends Component {
                     type='text'  
                     name='ifscCode' 
                     id='name'
+                    required
                     onChange={this.changeIfscCode}
                     value={this.state.ifscCode} />
                 
                 <label className='transaction-checkbox-label'><input className='signin-checkbox-input' type="checkbox"/> Remember me</label>
                 
                 <input className='transaction-submit-button'
-                    value='Pay' 
+                    value='Pay'
                     type='submit' />
             </form>
         </div>)

@@ -8,8 +8,12 @@
     justify-content: center;
     text-align: center;
     float: right;
-    border: 1px solid;
-    // border-radius: 50px;
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 5px 5px #2C2828;
+    background: rgb(97,185,223);
+    background: linear-gradient(90deg, rgba(97,185,223,1) 0%, rgba(113,181,203,1) 52%, rgba(190,229,235,1) 92%);
+    backdrop-filter: blur(10px);
     margin: 40px 50px 0px 0px;
     margin-top: 20vh;
     color: var(--textcol);
