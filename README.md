@@ -1,6 +1,17 @@
 # FPAY
+![Screenshot (2936)](https://user-images.githubusercontent.com/78858121/170859286-dcbd9832-054e-417f-aeaf-805245376920.png)
+![Screenshot (2937)](https://user-images.githubusercontent.com/78858121/170859512-4579707a-83ff-497d-a33b-6cc249640851.png)
+![Screenshot (2938)](https://user-images.githubusercontent.com/78858121/170859540-c9d9c98c-7fc6-43ef-ad8a-7719f4d131da.png)
+
 ## Objective:
 A website application for online transactions , online shopping or to clear any of your dues with extra security. After entering password, application matches the real time face with the image stored in database while signingup before confirming the payment process.
+
+### FRAMEWORKS/TECHNOLOGIES
+ReactJs :: Frontend
+NodeJs :: Backend
+Express :: Backend
+MongoDB :: Database
+Faceapi :: Face Recognition
 
 # Getting Started with Create React App
 
