@@ -8,7 +8,7 @@ A website application for online transactions , online shopping or to clear any 
 
 ### FRAMEWORKS/TECHNOLOGIES
 ```diff
- *ReactJs :: Frontend*
+ ReactJs :: Frontend
  NodeJs :: Backend
  Express :: Backend
  MongoDB :: Database
