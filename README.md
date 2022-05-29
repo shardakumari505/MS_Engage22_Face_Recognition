@@ -1,3 +1,4 @@
+[![npm](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)]()
 # FPAY
 ![Screenshot (2936)](https://user-images.githubusercontent.com/78858121/170859286-dcbd9832-054e-417f-aeaf-805245376920.png)
 ![Screenshot (2937)](https://user-images.githubusercontent.com/78858121/170859512-4579707a-83ff-497d-a33b-6cc249640851.png)
