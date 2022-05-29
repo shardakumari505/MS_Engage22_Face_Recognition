@@ -95,3 +95,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Future Scope:
+The application can be used in multiple domains considering the security face recognition provides. I aim to complete the project , implement it and fulfill the objective deploying fully working website.
