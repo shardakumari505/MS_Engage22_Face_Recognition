@@ -1,0 +1,14 @@
+.facerecog-lottie{
+    position: absolute;
+    height: 50vh;
+    width: 50vw;
+    z-index: 26;
+    right: 0px;
+    margin-top: 25vh;
+}
+.transaction-page-subsections button{
+    transition: all 1s
+}
+.transaction-page-subsections button:hover {
+    transform: scale(1.2);
+}

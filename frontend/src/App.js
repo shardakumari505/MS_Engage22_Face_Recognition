@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/signup" component={SignupPage} />
           <Route exact path="/transactionpage" component={TransactionPage} />
           <Route exact path="/eshop" component={Eshop} />          
-          <Route exact path="/facerecognize" component={FaceRecognize} />          
+          <Route exact path="/facerecognize" component={FaceRecognize} />
         </Switch>
       </main>
     </Router>

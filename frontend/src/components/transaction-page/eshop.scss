@@ -4,7 +4,12 @@
     width: 50vw;
     z-index: 26;
     right: 0px;
-    // right: 6vw;
     margin-top: auto;
     margin-bottom: auto;
+}
+.transaction-page-subsections button{
+    transition: all 1s;
+}
+.transaction-page-subsections button:hover{
+    transform: scale(1.2);
 }

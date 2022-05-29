@@ -21,4 +21,8 @@
     margin: 20px;
     color: aliceblue;
     background-color: #006ee6;
+    transition: all 1s;
+}
+.transaction-page-subsections button:hover{
+    transform: scale(1.2);
 }

@@ -1,8 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const userTable = require('../models/signupmodels')
-const Joi = require("joi")
-const bcrypt = require('bcrypt')
 
 
 router.post('/signin', async (req, res) =>{
@@ -31,7 +29,7 @@ router.post('/signin', async (req, res) =>{
             }); // respond with 404 status and send json response with success false and message. return will stop execution to go down
           }
 
-          res.redirect('http://localhost:5000/loggedindashboard/loggedindashboard');
+          res.redirect('http://localhost:5000/transactionpage');
   
         });
 });
