@@ -4,7 +4,7 @@
 ![Screenshot (2938)](https://user-images.githubusercontent.com/78858121/170859540-c9d9c98c-7fc6-43ef-ad8a-7719f4d131da.png)
 
 ## Objective:
-A website application for online transactions , online shopping or to clear any of your dues with extra security. After entering password, application matches the real time face with the image stored in database while signingup before confirming the payment process.
+A website application for online transactions , online shopping or to clear any of your dues with extra security. After entering password, application matches the real time face with the image stored in database (while signingup) before confirming the payment process.
 
 ### FRAMEWORKS/TECHNOLOGIES
 ReactJs :: Frontend
