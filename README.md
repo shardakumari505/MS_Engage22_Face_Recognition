@@ -7,8 +7,8 @@
 A website application for online transactions , online shopping or to clear any of your dues with extra security. After entering password, application matches the real time face with the image stored in database (while signingup) before confirming the payment process.
 
 ### FRAMEWORKS/TECHNOLOGIES
-@@ ReactJs :: Frontend @@
-@@ NodeJs :: Backend @@
+@@ ReactJs :: Frontend
+@@ NodeJs :: Backend
 ### Express :: Backend
 ### MongoDB :: Database
 ### Faceapi :: Face Recognition
