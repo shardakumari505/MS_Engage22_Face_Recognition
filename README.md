@@ -1,4 +1,7 @@
-# face_recognition
+# FPAY
+## Objective:
+A website application for online transactions , online shopping or to clear any of your dues with extra security. After entering password, application matches the real time face with the image stored in database while signingup before confirming the payment process.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -6,6 +9,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install` Within main folder (C:\Users\shard\face_recognition) and frontend folder (C:\Users\shard\face_recognition\frontend) to install all dependencies.
 
 ### `npm run dev`
 (Runs both the frontend and server concurrently)
